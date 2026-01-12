@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahra Virtual Assistant</title>
+
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- START OVERLAY -->
+<div id="startOverlay">
+  <div id="startCard">
+    <h2>Welcome to Your Virtual Assistant!</h2>
+    <button id="startBtn">Start</button>
+  </div>
+</div>
+
+<!-- INTERNET STATUS -->
+<div id="internetStatus" style="display:none;">
+  ⚠ No Internet Connection
+</div>
+
+<!-- LOGO + ASSISTANT MESSAGE -->
+<div id="logo-area">
+  <img src="logo.jpg" id="logo" alt="Sahra Logo">
+  <div id="assistantMsg">Click Start to begin...</div>
+</div>
+
+<!-- MAIN HEADING -->
+<h1>
+  I'm <span id="name">Sahra</span>,
+  Your <span id="va">Virtual Assistant</span>
+</h1>
+
+<!-- VOICE ANIMATION -->
+<video id="voice" muted loop playsinline>
+  <source src="voice.mp4" type="video/mp4">
+</video>
+
+<!-- MIC BUTTON -->
+<button id="btn">
+  <img src="mic.svg" alt="Microphone">
+  <span id="content">Click here to talk</span>
+</button>
+
+<!-- HISTORY -->
+<button id="historyBtn">History</button>
+
+<div id="historyPanel" style="display:none;">
+  <button id="closeHistory">✖</button>
+  <h3>Command History</h3>
+  <ul id="historyList"></ul>
+</div>
+
+<!-- OPENING SCREEN -->
+<div id="openingScreen" style="display:none;">
+  <video id="openingVideo" muted playsinline>
+    <source src="front.mp4" type="video/mp4">
+  </video>
+  <div id="load">Loading...</div>
+</div>
+
+<!-- GOODBYE SCREEN -->
+<div id="goodbyeScreen">
+  <h1>Shutting Down...</h1>
+</div>
+
+<!-- FLUID CURSOR -->
+<canvas id="fluid"></canvas>
+
+<!-- SCRIPTS -->
+<script src="fluid-cursor.js"></script>
+<script src="assi.js" defer></script>
+
+</body>
+</html>
